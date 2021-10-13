@@ -70,7 +70,201 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 35.19 seconds
 ```
 
+# HTTP TCP/80
 
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# nmap -sV --script=http-enum 192.168.74.107 -p 80
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-13 15:30 CDT
+Nmap scan report for 192.168.74.107
+Host is up (0.076s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+| http-enum: 
+|_  /robots.txt: Robots file
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.77 seconds
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# 
+```
+
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# dirb http://192.168.74.107
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Wed Oct 13 15:32:16 2021
+URL_BASE: http://192.168.74.107/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.74.107/ ----
++ http://192.168.74.107/index.html (CODE:200|SIZE:10918)                                                                                       
++ http://192.168.74.107/robots.txt (CODE:200|SIZE:17)                                                                                          
++ http://192.168.74.107/server-status (CODE:403|SIZE:279)                                                                                      
+                                                                                                                                               
+-----------------
+END_TIME: Wed Oct 13 15:40:51 2021
+DOWNLOADED: 4612 - FOUND: 3
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# 
+```
+
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# gobuster -u http://192.168.74.107 -t 50 -w /usr/share/dirb/wordlists/big.txt -x .php,.html,.txt -r 
+
+Gobuster v1.4.1              OJ Reeves (@TheColonial)
+=====================================================
+=====================================================
+[+] Mode         : dir
+[+] Url/Domain   : http://192.168.74.107/
+[+] Threads      : 50
+[+] Wordlist     : /usr/share/dirb/wordlists/big.txt
+[+] Status codes : 204,301,302,307,200
+[+] Extensions   : .php,.html,.txt
+[+] Follow Redir : true
+=====================================================
+/index.html (Status: 200)
+/robots.txt (Status: 200)
+/robots.txt (Status: 200)
+=====================================================
+```
+
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# python3 /opt/dirsearch/dirsearch.py -u http://192.168.74.107 -e php,html,txt -x 403
+
+ _|. _ _  _  _  _ _|_    v0.3.9
+(_||| _) (/_(_|| (_| )
+
+Extensions: php, html, txt | HTTP method: get | Threads: 10 | Wordlist size: 6748
+
+Error Log: /opt/dirsearch/logs/errors-21-10-13_16-22-37.log
+
+Target: http://192.168.74.107
+
+[16:22:38] Starting: 
+[16:23:30] 200 -   11KB - /index.html
+[16:23:49] 200 -   17B  - /robots.txt
+
+Task Completed
+```
+
+
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# wfuzz -c -t 500 --hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://192.168.74.107/FUZZ
+
+Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
+
+********************************************************
+* Wfuzz 2.2.11 - The Web Fuzzer                        *
+********************************************************
+
+Target: http://192.168.74.107/FUZZ
+Total requests: 220560
+
+==================================================================
+ID	Response   Lines      Word         Chars          Payload    
+==================================================================
+
+000005:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons"
+000006:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this"
+000007:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/"
+000008:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street,"
+000009:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA."
+000010:  C=200    375 L	     964 W	  10918 Ch	  "#"
+000011:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found"
+000012:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts"
+000013:  C=200    375 L	     964 W	  10918 Ch	  "#"
+000014:  C=200    375 L	     964 W	  10918 Ch	  ""
+000001:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt"
+000002:  C=200    375 L	     964 W	  10918 Ch	  "#"
+000003:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher"
+000004:  C=200    375 L	     964 W	  10918 Ch	  "#"
+034432:  C=404      9 L	      31 W	    276 Ch	  "irp"
+Fatal exception: Pycurl error 28: Operation timed out after 90008 milliseconds with 0 bytes received
+```
+
+```console
+root@kali:/OSCPv3/offsec_pg/FunboxRookie# wfuzz -c -t 500 --hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -w ext.txt http://192.168.74.107/FUZZ.FUZ2Z
+
+Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
+
+********************************************************
+* Wfuzz 2.2.11 - The Web Fuzzer                        *
+********************************************************
+
+Target: http://192.168.74.107/FUZZ.FUZ2Z
+Total requests: 882240
+
+==================================================================
+ID	Response   Lines      Word         Chars          Payload    
+==================================================================
+
+000001:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - php"
+000002:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - txt"
+000003:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - html"
+000004:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - xml"
+000006:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
+000005:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
+000007:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
+000008:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
+000009:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - php"
+000010:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - txt"
+000012:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - xml"
+000011:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - html"
+000014:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
+000013:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
+000015:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
+000016:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
+000017:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - php"
+000029:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - php"
+000018:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - txt"
+000023:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - html"
+000019:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - html"
+000020:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - xml"
+000021:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - php"
+000022:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - txt"
+000024:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - xml"
+000025:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - php"
+000026:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - txt"
+000027:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - html"
+000028:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - xml"
+000035:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - html"
+000030:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - txt"
+000031:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - html"
+000032:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - xml"
+000033:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - php"
+000034:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - txt"
+000036:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - xml"
+000038:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
+000037:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
+000039:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
+000043:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - html"
+000040:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
+000041:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - php"
+000042:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - txt"
+000050:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
+000045:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - php"
+000046:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - txt"
+000047:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - html"
+000048:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - xml"
+000049:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
+000051:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
+000052:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
+000053:  C=403      9 L	      28 W	    279 Ch	  " - php"
+000055:  C=403      9 L	      28 W	    279 Ch	  " - html"
+000059:  C=200    375 L	     964 W	  10918 Ch	  "index - html"
+000044:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - xml"
+007058:  C=200      1 L	       2 W	     17 Ch	  "robots - txt"
+032357:  C=404      9 L	      31 W	    276 Ch	  "tetris - php"
+Fatal exception: Pycurl error 28: Operation timed out after 90014 milliseconds with 0 bytes received
+```
 
 ## FTP TCP/21
 
@@ -201,205 +395,6 @@ mOGTmkqb3grpy4sp/5QQFtE10fh1Ll+BXsK46HE2pPtg/JHoXyeFevpLXi8YgYjQ
 22nBTFCyu2vcWKEQI21H7Rej9FGyFSnPedDNp0C58WPdEuGIC/tr
 -----END RSA PRIVATE KEY-----
 ```
-
-# HTTP TCP/80
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# nmap -sV --script=http-enum 192.168.74.107 -p 80
-Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-13 15:30 CDT
-Nmap scan report for 192.168.74.107
-Host is up (0.076s latency).
-
-PORT   STATE SERVICE VERSION
-80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
-| http-enum: 
-|_  /robots.txt: Robots file
-|_http-server-header: Apache/2.4.29 (Ubuntu)
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 31.77 seconds
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# 
-```
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# dirb http://192.168.74.107
-
------------------
-DIRB v2.22    
-By The Dark Raver
------------------
-
-START_TIME: Wed Oct 13 15:32:16 2021
-URL_BASE: http://192.168.74.107/
-WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
-
------------------
-
-GENERATED WORDS: 4612                                                          
-
----- Scanning URL: http://192.168.74.107/ ----
-+ http://192.168.74.107/index.html (CODE:200|SIZE:10918)                                                                                       
-+ http://192.168.74.107/robots.txt (CODE:200|SIZE:17)                                                                                          
-+ http://192.168.74.107/server-status (CODE:403|SIZE:279)                                                                                      
-                                                                                                                                               
------------------
-END_TIME: Wed Oct 13 15:40:51 2021
-DOWNLOADED: 4612 - FOUND: 3
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# 
-```
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# gobuster -u http://192.168.74.107 -t 50 -w /usr/share/dirb/wordlists/big.txt -x .php,.html,.txt -r 
-
-Gobuster v1.4.1              OJ Reeves (@TheColonial)
-=====================================================
-=====================================================
-[+] Mode         : dir
-[+] Url/Domain   : http://192.168.74.107/
-[+] Threads      : 50
-[+] Wordlist     : /usr/share/dirb/wordlists/big.txt
-[+] Status codes : 204,301,302,307,200
-[+] Extensions   : .php,.html,.txt
-[+] Follow Redir : true
-=====================================================
-/index.html (Status: 200)
-/robots.txt (Status: 200)
-/robots.txt (Status: 200)
-=====================================================
-```
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# python3 /opt/dirsearch/dirsearch.py -u http://192.168.74.107 -e php,html,txt -x 403
-
- _|. _ _  _  _  _ _|_    v0.3.9
-(_||| _) (/_(_|| (_| )
-
-Extensions: php, html, txt | HTTP method: get | Threads: 10 | Wordlist size: 6748
-
-Error Log: /opt/dirsearch/logs/errors-21-10-13_16-22-37.log
-
-Target: http://192.168.74.107
-
-[16:22:38] Starting: 
-[16:23:30] 200 -   11KB - /index.html
-[16:23:49] 200 -   17B  - /robots.txt
-
-Task Completed
-```
-
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# wfuzz -c -t 500 --hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://192.168.74.107/FUZZ
-
-Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
-
-********************************************************
-* Wfuzz 2.2.11 - The Web Fuzzer                        *
-********************************************************
-
-Target: http://192.168.74.107/FUZZ
-Total requests: 220560
-
-==================================================================
-ID	Response   Lines      Word         Chars          Payload    
-==================================================================
-
-000005:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons"
-000006:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this"
-000007:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/"
-000008:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street,"
-000009:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA."
-000010:  C=200    375 L	     964 W	  10918 Ch	  "#"
-000011:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found"
-000012:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts"
-000013:  C=200    375 L	     964 W	  10918 Ch	  "#"
-000014:  C=200    375 L	     964 W	  10918 Ch	  ""
-000001:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt"
-000002:  C=200    375 L	     964 W	  10918 Ch	  "#"
-000003:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher"
-000004:  C=200    375 L	     964 W	  10918 Ch	  "#"
-034432:  C=404      9 L	      31 W	    276 Ch	  "irp"
-Fatal exception: Pycurl error 28: Operation timed out after 90008 milliseconds with 0 bytes received
-```
-
-
-
-```console
-root@kali:/OSCPv3/offsec_pg/FunboxRookie# wfuzz -c -t 500 --hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -w ext.txt http://192.168.74.107/FUZZ.FUZ2Z
-
-Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz's documentation for more information.
-
-********************************************************
-* Wfuzz 2.2.11 - The Web Fuzzer                        *
-********************************************************
-
-Target: http://192.168.74.107/FUZZ.FUZ2Z
-Total requests: 882240
-
-==================================================================
-ID	Response   Lines      Word         Chars          Payload    
-==================================================================
-
-000001:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - php"
-000002:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - txt"
-000003:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - html"
-000004:  C=200    375 L	     964 W	  10918 Ch	  "# directory-list-2.3-medium.txt - xml"
-000006:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
-000005:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
-000007:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
-000008:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
-000009:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - php"
-000010:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - txt"
-000012:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - xml"
-000011:  C=200    375 L	     964 W	  10918 Ch	  "# Copyright 2007 James Fisher - html"
-000014:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
-000013:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
-000015:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
-000016:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
-000017:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - php"
-000029:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - php"
-000018:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - txt"
-000023:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - html"
-000019:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - html"
-000020:  C=200    375 L	     964 W	  10918 Ch	  "# This work is licensed under the Creative Commons - xml"
-000021:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - php"
-000022:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - txt"
-000024:  C=200    375 L	     964 W	  10918 Ch	  "# Attribution-Share Alike 3.0 License. To view a copy of this - xml"
-000025:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - php"
-000026:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - txt"
-000027:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - html"
-000028:  C=200    375 L	     964 W	  10918 Ch	  "# license, visit http://creativecommons.org/licenses/by-sa/3.0/ - xml"
-000035:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - html"
-000030:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - txt"
-000031:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - html"
-000032:  C=200    375 L	     964 W	  10918 Ch	  "# or send a letter to Creative Commons, 171 Second Street, - xml"
-000033:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - php"
-000034:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - txt"
-000036:  C=200    375 L	     964 W	  10918 Ch	  "# Suite 300, San Francisco, California, 94105, USA. - xml"
-000038:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
-000037:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
-000039:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
-000043:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - html"
-000040:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
-000041:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - php"
-000042:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - txt"
-000050:  C=200    375 L	     964 W	  10918 Ch	  "# - txt"
-000045:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - php"
-000046:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - txt"
-000047:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - html"
-000048:  C=200    375 L	     964 W	  10918 Ch	  "# on atleast 2 different hosts - xml"
-000049:  C=200    375 L	     964 W	  10918 Ch	  "# - php"
-000051:  C=200    375 L	     964 W	  10918 Ch	  "# - html"
-000052:  C=200    375 L	     964 W	  10918 Ch	  "# - xml"
-000053:  C=403      9 L	      28 W	    279 Ch	  " - php"
-000055:  C=403      9 L	      28 W	    279 Ch	  " - html"
-000059:  C=200    375 L	     964 W	  10918 Ch	  "index - html"
-000044:  C=200    375 L	     964 W	  10918 Ch	  "# Priority ordered case sensative list, where entries were found - xml"
-007058:  C=200      1 L	       2 W	     17 Ch	  "robots - txt"
-032357:  C=404      9 L	      31 W	    276 Ch	  "tetris - php"
-Fatal exception: Pycurl error 28: Operation timed out after 90014 milliseconds with 0 bytes received
-```
-
 
 # Explotation
 
