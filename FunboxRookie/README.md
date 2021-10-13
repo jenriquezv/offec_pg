@@ -72,7 +72,7 @@ Nmap done: 1 IP address (1 host up) scanned in 35.19 seconds
 
 
 
-##FTP TCP/21
+## FTP TCP/21
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxRookie# ftp 192.168.74.107
@@ -555,3 +555,9 @@ root@funbox2:/root# cat proof.txt
 496e5e043d5cd47427ed97fa0be8ba8e
 root@funbox2:/root# 
 ```
+
+### References
+https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#enumeration
+https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux-examples.rst
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md#scheduled-tasks
+https://book.hacktricks.xyz/linux-unix/privilege-escalation
