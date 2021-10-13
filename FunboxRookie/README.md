@@ -553,6 +553,9 @@ root@funbox2:/root#
 
 ### References
 https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#enumeration
+
 https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/privilege-escalation/linux/linux-examples.rst
+
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md#scheduled-tasks
+
 https://book.hacktricks.xyz/linux-unix/privilege-escalation
