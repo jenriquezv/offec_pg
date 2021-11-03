@@ -94,9 +94,8 @@ PORT     STATE SERVICE REASON  VERSION
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 1.23 seconds
-
-https://book.hacktricks.xyz/pentesting/pentesting-irc
 ```
+https://book.hacktricks.xyz/pentesting/pentesting-irc
 
 # IRC TCP/8067
 
