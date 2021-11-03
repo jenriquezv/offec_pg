@@ -30,7 +30,7 @@ Nmap done: 1 IP address (1 host up) scanned in 85.66 seconds
 
 ```
 
-##HTTP TCP/80
+## HTTP TCP/80
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# nmap -Pn -sT -sV --script=http-enum -n 192.168.111.132 -p 80
