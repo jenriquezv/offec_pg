@@ -72,6 +72,9 @@ Nmap done: 1 IP address (1 host up) scanned in 35.19 seconds
 
 # HTTP TCP/80
 
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxRookie/1.png)
+
+
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxRookie# nmap -sV --script=http-enum 192.168.74.107 -p 80
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-13 15:30 CDT
@@ -115,6 +118,7 @@ END_TIME: Wed Oct 13 15:40:51 2021
 DOWNLOADED: 4612 - FOUND: 3
 root@kali:/OSCPv3/offsec_pg/FunboxRookie# 
 ```
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxRookie/2.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxRookie# gobuster -u http://192.168.74.107 -t 50 -w /usr/share/dirb/wordlists/big.txt -x .php,.html,.txt -r 
