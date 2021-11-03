@@ -52,6 +52,8 @@ PORT      STATE SERVICE VERSION
 |_    HY000
 
 
+## HTTP TCP/80
+
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 31.22 seconds
 ```
@@ -155,6 +157,8 @@ root@kali:/OSCPv3/offsec_pg/FunboxEasy#
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/13.png)
 
 
+# Explotation 1
+
 ```console
 
 root@kali:/OSCPv3/offsec_pg/FunboxEasy# searchsploit Small CRM
@@ -182,6 +186,8 @@ SQL injection: ' or 1=1 --
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/19.png)
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/20.png)
+
+# Explotation 2
 
 Default pwd
 
@@ -275,6 +281,8 @@ www-data@funbox3:/var/www$ cat local.txt
 ee15b49a4eec8f58e6be308d039aa98c
 ```
 
+## SSH TCP/22
+
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasy# ssh tony@192.168.69.111
 The authenticity of host '192.168.69.111 (192.168.69.111)' can't be established.
@@ -317,6 +325,8 @@ See "man sudo_root" for details.
 
 tony@funbox3:~$ 
 ```
+
+# Privilege escalation 
 
 ```console
 tony@funbox3:~$ sudo -l
