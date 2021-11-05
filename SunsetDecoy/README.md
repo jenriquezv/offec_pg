@@ -286,6 +286,8 @@ The AV Scan will be launched in a minute or less.
 > [kworker/u2:2-flush-8:0]
 < [kworker/u2:2-flush-8:0]
 > [kworker/u2:2-events_unbound]
+.........
+.........
 ```
 https://vk9-sec.com/chkrootkit-0-49-local-privilege-escalation-cve-2014-0476/
 
@@ -332,6 +334,9 @@ The AV Scan will be launched in a minute or less.
 > [kworker/u2:2-flush-8:0]
 < [kworker/u2:2-flush-8:0]
 > [kworker/u2:2-events_unbound]
+.........
+.........
+
 ```
 
 ```console
