@@ -268,7 +268,7 @@ root@kali:/OSCPv3/offsec_pg/Dawn# nikto -h http://192.168.106.11 -C all
       for a Nikto update (or you may email to sullo@cirt.net) (y/n)? n
 ```
 
-## Samba TCP/445
+## SMB TCP/445
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Dawn# nmap -Pn -sT -n --script smb-enum-shares.nse 192.168.106.11 -p 135,139,445
