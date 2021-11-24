@@ -1,0 +1,26 @@
+admin:admin
+admin
+password@123
+
+
+
+
+
+
+╔══════════╣ Analyzing Htpasswd Files (limit 70)
+-rw-r--r-- 1 root root 44 May 11  2020 /etc/nginx/.htpasswd
+admin:$apr1$1xby0ne1$riRBQEbOQovyW3qF1iqlZ1
+
+/home/katana/.gnupg
+/etc/skel/.bashrc
+/etc/skel/.profile
+
+xxj31ZMTZzkVA
+secret
+
+
+
+
+
+
+
