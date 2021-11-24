@@ -48,7 +48,7 @@ root@kali:/OSCPv3/offsec_pg/Dawn# curl 192.168.106.11
 </html>       
 ```
 
-![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Dawn/1.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Dawn/img/1.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Dawn# nmap -Pn -sT -sV --script http-enum -n 192.168.106.11 -p 80
