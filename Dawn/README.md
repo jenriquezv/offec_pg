@@ -48,7 +48,7 @@ root@kali:/OSCPv3/offsec_pg/Dawn# curl 192.168.106.11
 </html>       
 ```
 
-![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Gaara/Dawn/1.png)
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Dawn/1.png)
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Dawn# nmap -Pn -sT -sV --script http-enum -n 192.168.106.11 -p 80
@@ -367,6 +367,7 @@ root@kali:/OSCPv3/offsec_pg/Dawn# smbmap -H 192.168.106.11 -u ''
 	ITDEPT                                            	READ, WRITE
 	IPC$                                              	NO ACCESS
 ```
+# Explotation
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Dawn# cat product-control 
@@ -414,6 +415,8 @@ dawn@dawn:~$ export SHELL=bash
 dawn@dawn:~$ cat local.txt 
 661f689ef3f5ae351891bbf7c1ac9097
 ```
+
+# Privilege escalation 
 
 ```console
 dawn@dawn:~/ITDEPT$ ls
