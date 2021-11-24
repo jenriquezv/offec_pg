@@ -1,0 +1,20 @@
+# TCP/22
+
+SSH Brute Force
+
+
+# TCP/80
+
+httpd 2.4.29
+
+/robots.txt
+/phpinfo.php
+
+sar2html Ver 3.2.1
+
+
+
+
+# Priv
+
+user:love
