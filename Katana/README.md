@@ -19,7 +19,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 
-## TCP/21 FTP
+## FTP TCP/21
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Katana# ftp 192.168.150.83
@@ -35,7 +35,7 @@ ftp> quit
 ```
 
 
-## TCP/80 HTTP
+## HTTP TCP/80
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Katana# curl 192.168.150.83
@@ -166,7 +166,7 @@ $debug = 0;
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Katana/img/10.png)
 
 
-## TCP/8088 HTTP
+## HTTP TCP/8088 
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Katana/img/11.png)
 
@@ -318,7 +318,7 @@ Task Completed
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Katana/img/15.png)
 
 
-# TCP/8715 HTTP
+# HTTP TCP/8715 
 
 admin/admin
 
@@ -541,7 +541,6 @@ root@katana:/root# cat proof.txt
 1bd16878d22e0e484be1d99cc3edaafd
 ```
 
-
 https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities
 
 ```console
@@ -570,16 +569,19 @@ root@katana:/tmp# getcap /usr/bin/python2.7
 /usr/bin/python2.7 = cap_setuid+ep
 ```
 
+```shell
 gcc -Wl,--no-as-needed -lcap-ng -o ambient ambient.c
 sudo setcap cap_setpcap,cap_net_raw,cap_net_admin,cap_sys_nice+eip ambient
 ./ambient /bin/bash
+```
 
-
+```shell
 #Set Capability
 setcap cap_net_raw+ep /sbin/ping
 #Get Capability
 getcap /sbin/ping
 /sbin/ping = cap_net_raw+ep
+```
 
 ```console
 root@katana:/tmp# capsh --print
@@ -595,5 +597,3 @@ groups=33(www-data)
 ```
 
 https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities
-
-
