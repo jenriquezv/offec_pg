@@ -68,9 +68,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 12.29 seconds
 ```
 
-
-
-## SMB TCP/139, TCp/445/
+## SMB TCP/139, TCP/445
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Seppuku# nmap -sV --script "vuln" -p 139,445 192.168.135.90
@@ -197,7 +195,6 @@ root@kali:/OSCPv3/offsec_pg/Seppuku# mount -t cifs //192.168.135.90/print$ tmp -
 mount: /OSCPv3/offsec_pg/Seppuku/tmp: cannot mount //192.168.135.90/print$ read-only.
 ``` 
 
-
 ```console
 root@kali:/OSCPv3/offsec_pg/Seppuku# nmap -p 445 192.168.135.90 --script smb-ls --script-args 'share=IPC$'
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-19 00:10 CST
@@ -211,7 +208,6 @@ PORT    STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 1.71 seconds
 ```
-
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Seppuku# nmap -p 445 192.168.135.90 --script smb-ls --script-args 'share=print$,path=C:\var\lib\samba\printers'
@@ -233,7 +229,6 @@ PORT    STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 1.56 seconds
 ```
-
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Seppuku# searchsploit Samba 4.
@@ -269,7 +264,7 @@ Papers: No Results
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Seppuku/img/1.png)
 
-## HTTP TCP/8088 - LiteSpeed
+## HTTP TCP/8088 
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Seppuku/img/2.png)
 
@@ -534,19 +529,6 @@ passwd.bak                          100%[=======================================
 ```
 
 ```console
-root@kali:/OSCPv3/offsec_pg/Seppuku/secret# wget http://192.168.135.90:7601/secret/password.lst
---2021-11-19 00:44:04--  http://192.168.135.90:7601/secret/password.lst
-Conectando con 192.168.135.90:7601... conectado.
-Petición HTTP enviada, esperando respuesta... 200 OK
-Longitud: 672
-Grabando a: “password.lst”
-
-password.lst                        100%[===================================================================>]     672  --.-KB/s    en 0s      
-
-2021-11-19 00:44:04 (54,0 MB/s) - “password.lst” guardado [672/672]
-```
-
-```console
 root@kali:/OSCPv3/offsec_pg/Seppuku/secret# wget http://192.168.135.90:7601/secret/shadow.bak
 --2021-11-19 00:44:17--  http://192.168.135.90:7601/secret/shadow.bak
 Conectando con 192.168.135.90:7601... conectado.
@@ -557,6 +539,19 @@ Grabando a: “shadow.bak”
 shadow.bak                          100%[===================================================================>]   1,41K  --.-KB/s    en 0s      
 
 2021-11-19 00:44:17 (192 MB/s) - “shadow.bak” guardado [1448/1448]
+```
+
+```console
+root@kali:/OSCPv3/offsec_pg/Seppuku/secret# wget http://192.168.135.90:7601/secret/password.lst
+--2021-11-19 00:44:04--  http://192.168.135.90:7601/secret/password.lst
+Conectando con 192.168.135.90:7601... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 672
+Grabando a: “password.lst”
+
+password.lst                        100%[===================================================================>]     672  --.-KB/s    en 0s      
+
+2021-11-19 00:44:04 (54,0 MB/s) - “password.lst” guardado [672/672]
 ```
 
 ```console
