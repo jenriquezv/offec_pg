@@ -320,7 +320,7 @@ www-data@ubuntu:/var/www$ cat local.txt
 1e611f8c40cf00f70b60f43a0cb73667
 ``` 
 
-# Privilege escalationRecon
+# Privilege escalation
 
 ```console
 www-data@ubuntu:/home/natraj$ ls -la
@@ -493,7 +493,3 @@ natraj:$6$.XodHndc$.SOi8b139xN..aav96Yu5iEb3R.ilcgxEfZrMh7f4c4Xki7R6yCQJp5drmwVS
 sshd:*:18416:0:99999:7:::
 mahakal:$6$mIBwJYQr$ptq3ijnX.wf5CQ8zVCnxx91t8J.lFcawMnzs34V3aVL5yv2nXKnVR1eSOudW3dAvjv4qExqnwGDVOrmK6Mise1:18445:0:99999:7:::
 ``` 
-
-
-
-
