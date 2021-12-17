@@ -50,7 +50,7 @@ Shellcodes: No Results
 Papers: No Results
 ```
 
-# HTTP TCP/80
+## HTTP TCP/80
 ```console
 root@kali:/OSCPv3/offsec_pg/Geisha# nmap -Pn -sT -sV --script http-enum -n 192.168.133.82 -p 80 
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-26 16:25 CST
@@ -167,7 +167,7 @@ Task Completed
 ```
 
 
-# HTTP TCP/7125 
+## HTTP TCP/7125 
 
 ![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Geisha/img/1.png)
 
