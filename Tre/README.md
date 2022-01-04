@@ -20,6 +20,8 @@ Nmap done: 1 IP address (1 host up) scanned in 92.65 seconds
 
 ## HTTP TCP/80
 
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/1.png)
+
 ```console
 oot@kali:/OSCPv3/offsec_pg/Tre# nmap -Pn -sT -sV -n 192.168.234.84 -p 80 --script http-enum 
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-12-08 23:35 CST
@@ -39,6 +41,13 @@ PORT   STATE SERVICE VERSION
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 17.13 seconds
 ```
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/2.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/3.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/4.png)
+
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Tre# python3 /opt/dirsearch/dirsearch.py -u http://192.168.234.84/ -e php,txt,xml -x 403
@@ -129,6 +138,10 @@ Filtered Requests: 6087
 Requests/sec.: 177.6955
 ```
 
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/5.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/6.png)
+
 # Explotation
 
 ```console
@@ -162,12 +175,36 @@ $g_db_type       = 'mysqli';
 # $g_default_home_page = 'my_view_page.php';	# Set to name of page to go to after login
 ``` 
 
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/7.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/8.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/9.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/10.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/11.png)
+
+
 ```shell
 administrator:XiBejMub
 tre:Tr3@123456A!
 
 64c4685f8da5c2225de7890c1bad0d7f
 ```
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/12.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/13.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/14.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/15.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/16.png)
+
+![Web](https://github.com/jenriquezv/offsec_pg/blob/main/Tre/img/17.png)
+
 
 ```console
 root@kali:/OSCPv3/offsec_pg/Tre# ssh tre@192.168.196.84
