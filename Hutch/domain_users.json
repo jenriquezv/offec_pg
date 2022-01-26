@@ -1,0 +1,1582 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:11.474291+00:00"
+        ],
+        "badPwdCount": [
+            36
+        ],
+        "cn": [
+            "Domain Administrator"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:41:32+00:00",
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:04:16+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Domain Administrator,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-25 02:26:43.646154+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-25 02:25:57.521154+00:00"
+        ],
+        "logonCount": [
+            41
+        ],
+        "memberOf": [
+            "CN=Domain Admins,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "Domain Administrator"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{5427e477-9cd9-4c9b-b355-3c6182ce3e97}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1116"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2021-02-16 05:24:22.190351+00:00"
+        ],
+        "sAMAccountName": [
+            "domainadmin"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            73772
+        ],
+        "uSNCreated": [
+            12837
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "admin@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2022-01-25 02:25:57+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Domain Administrator,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:25:14.083670+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Freddy McSorley"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "description": [
+            "Password set to CrabSharkJellyfish192 at user's request. Please change on next login."
+        ],
+        "distinguishedName": [
+            "CN=Freddy McSorley,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-25 05:25:33.255575+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-25 05:24:11.630697+00:00"
+        ],
+        "logonCount": [
+            2
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "Freddy McSorley"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{18a5184f-4c88-4b56-9e8b-a2a994277cba}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1115"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.815275+00:00"
+        ],
+        "sAMAccountName": [
+            "fmcsorley"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            96831
+        ],
+        "uSNCreated": [
+            12831
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "userPrincipalName": [
+            "fmcsorley@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2022-01-25 05:24:11+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Freddy McSorley,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:20.083683+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Arthur Gitthouse"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Arthur Gitthouse,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Arthur Gitthouse"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{4c100f3d-6d53-47c3-a580-f93359a3a61c}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1114"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.760273+00:00"
+        ],
+        "sAMAccountName": [
+            "agitthouse"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12829
+        ],
+        "uSNCreated": [
+            12825
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "agitthouse@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Arthur Gitthouse,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:19.443050+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Claus Luddy"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Claus Luddy,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Claus Luddy"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{0af1765d-f122-421e-a303-b3ddd154ead4}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1113"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.703274+00:00"
+        ],
+        "sAMAccountName": [
+            "cluddy"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12823
+        ],
+        "uSNCreated": [
+            12819
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "cluddy@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Claus Luddy,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:18.755550+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Editha Aburrow"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Editha Aburrow,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Editha Aburrow"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{bb72b0fb-5092-4db9-937e-b2d27a04fc55}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1112"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.652271+00:00"
+        ],
+        "sAMAccountName": [
+            "eaburrow"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12817
+        ],
+        "uSNCreated": [
+            12813
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "eaburrow@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Editha Aburrow,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:18.052469+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Jane Frarey"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Jane Frarey,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Jane Frarey"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{9e04118b-7d4f-457f-9cc1-548d2be7bea0}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1111"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.603273+00:00"
+        ],
+        "sAMAccountName": [
+            "jfrarey"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12811
+        ],
+        "uSNCreated": [
+            12807
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "jfrarey@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Jane Frarey,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:17.396179+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Alexia Victoria"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Alexia Victoria,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Alexia Victoria"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{1f2289a5-274c-4111-ad4e-f26679dd684d}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1110"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.545279+00:00"
+        ],
+        "sAMAccountName": [
+            "avictoria"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12805
+        ],
+        "uSNCreated": [
+            12801
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "avictoria@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Alexia Victoria,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:16.755548+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Joan McKendry"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Joan McKendry,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Joan McKendry"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{80af086b-a87b-420c-ab45-6b6f195df5ad}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1109"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.492273+00:00"
+        ],
+        "sAMAccountName": [
+            "jmckendry"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12799
+        ],
+        "uSNCreated": [
+            12795
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "jmckendry@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Joan McKendry,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:16.114937+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Ottilie Knee"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Ottilie Knee,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Ottilie Knee"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{0f2fb3fd-de1f-4ee7-93e2-543eac1f3f14}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1108"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.433273+00:00"
+        ],
+        "sAMAccountName": [
+            "oknee"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12793
+        ],
+        "uSNCreated": [
+            12789
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "oknee@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Ottilie Knee,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:15.443066+00:00"
+        ],
+        "badPwdCount": [
+            43
+        ],
+        "cn": [
+            "Johnnie Sparwell"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Johnnie Sparwell,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Johnnie Sparwell"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{dd5454cb-9ac7-4ca8-a7d5-779c04d86455}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1107"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.377272+00:00"
+        ],
+        "sAMAccountName": [
+            "jsparwell"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12787
+        ],
+        "uSNCreated": [
+            12783
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "jsparwell@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Johnnie Sparwell,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:14.771273+00:00"
+        ],
+        "badPwdCount": [
+            44
+        ],
+        "cn": [
+            "Arlyn Costello"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Arlyn Costello,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Arlyn Costello"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{7f1ed339-00ae-4687-a95f-6fcbcaa88760}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1106"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.315271+00:00"
+        ],
+        "sAMAccountName": [
+            "acostello"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12781
+        ],
+        "uSNCreated": [
+            12777
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "acostello@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Arlyn Costello,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:14.130550+00:00"
+        ],
+        "badPwdCount": [
+            44
+        ],
+        "cn": [
+            "Lyndsie Taunton"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Lyndsie Taunton,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Lyndsie Taunton"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{820ac1a2-da2a-40a7-b4e8-ea5bfd673c95}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1105"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.264273+00:00"
+        ],
+        "sAMAccountName": [
+            "ltaunton"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12775
+        ],
+        "uSNCreated": [
+            12771
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "ltaunton@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Lyndsie Taunton,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:13.474289+00:00"
+        ],
+        "badPwdCount": [
+            44
+        ],
+        "cn": [
+            "Otto Patry"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Otto Patry,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Otto Patry"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{eb77f067-861f-42ec-903a-1edb76ad8676}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1104"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.216272+00:00"
+        ],
+        "sAMAccountName": [
+            "opatry"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12769
+        ],
+        "uSNCreated": [
+            12765
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "opatry@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Otto Patry,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:12.802416+00:00"
+        ],
+        "badPwdCount": [
+            44
+        ],
+        "cn": [
+            "Rosaline Placidi"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Rosaline Placidi,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "name": [
+            "Rosaline Placidi"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{6adc7566-7489-4387-b4e9-e087b2c82c6b}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1103"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:35:05.106274+00:00"
+        ],
+        "sAMAccountName": [
+            "rplacidi"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            12763
+        ],
+        "uSNCreated": [
+            12759
+        ],
+        "userAccountControl": [
+            512
+        ],
+        "userPrincipalName": [
+            "rplacidi@hutch.offsec"
+        ],
+        "whenChanged": [
+            "2020-11-04 05:35:05+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:35:05+00:00"
+        ]
+    },
+    "dn": "CN=Rosaline Placidi,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "krbtgt"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:41:32+00:00",
+            "2020-11-04 05:35:13+00:00",
+            "2020-11-04 05:26:23+00:00",
+            "1601-01-01 18:16:32+00:00"
+        ],
+        "description": [
+            "Key Distribution Center Service Account"
+        ],
+        "distinguishedName": [
+            "CN=krbtgt,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Denied RODC Password Replication Group,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "krbtgt"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{98136aea-b742-43ea-ba71-0c8f1f1bc2d4}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-502"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2020-11-04 05:26:23.099901+00:00"
+        ],
+        "sAMAccountName": [
+            "krbtgt"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "kadmin/changepw"
+        ],
+        "showInAdvancedViewOnly": [
+            true
+        ],
+        "uSNChanged": [
+            12878
+        ],
+        "uSNCreated": [
+            12324
+        ],
+        "userAccountControl": [
+            514
+        ],
+        "whenChanged": [
+            "2020-11-04 05:41:32+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:26:23+00:00"
+        ]
+    },
+    "dn": "CN=krbtgt,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-25 04:47:36.443069+00:00"
+        ],
+        "badPwdCount": [
+            5
+        ],
+        "cn": [
+            "Guest"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:35:13+00:00",
+            "2020-11-04 05:26:23+00:00",
+            "1601-01-01 00:04:17+00:00"
+        ],
+        "description": [
+            "Built-in account for guest access to the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Guest,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Guests,CN=Builtin,DC=hutch,DC=offsec"
+        ],
+        "name": [
+            "Guest"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{0044ab54-9003-48f2-bc3c-a441b3bc47f8}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-501"
+        ],
+        "primaryGroupID": [
+            514
+        ],
+        "pwdLastSet": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "sAMAccountName": [
+            "Guest"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            8197
+        ],
+        "uSNCreated": [
+            8197
+        ],
+        "userAccountControl": [
+            66082
+        ],
+        "whenChanged": [
+            "2020-11-04 05:25:40+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:25:40+00:00"
+        ]
+    },
+    "dn": "CN=Guest,CN=Users,DC=hutch,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2022-01-25 05:05:12.114943+00:00"
+        ],
+        "badPwdCount": [
+            44
+        ],
+        "cn": [
+            "Administrator"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 05:41:32+00:00",
+            "2020-11-04 05:41:32+00:00",
+            "2020-11-04 05:35:13+00:00",
+            "2020-11-04 05:26:23+00:00",
+            "1601-07-14 22:32:32+00:00"
+        ],
+        "description": [
+            "Built-in account for administering the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Administrator,CN=Users,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2020-11-04 05:58:40.654236+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2020-11-04 05:34:19.535406+00:00"
+        ],
+        "logonCount": [
+            9
+        ],
+        "memberOf": [
+            "CN=Group Policy Creator Owners,CN=Users,DC=hutch,DC=offsec",
+            "CN=Domain Admins,CN=Users,DC=hutch,DC=offsec",
+            "CN=Enterprise Admins,CN=Users,DC=hutch,DC=offsec",
+            "CN=Schema Admins,CN=Users,DC=hutch,DC=offsec",
+            "CN=Administrators,CN=Builtin,DC=hutch,DC=offsec"
+        ],
+        "name": [
+            "Administrator"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{94f24b6e-ec60-48cb-aaae-f9c38dc787b8}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-500"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2022-01-25 02:29:24.443041+00:00"
+        ],
+        "sAMAccountName": [
+            "Administrator"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            73796
+        ],
+        "uSNCreated": [
+            8196
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "whenChanged": [
+            "2022-01-25 02:29:24+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:25:40+00:00"
+        ]
+    },
+    "dn": "CN=Administrator,CN=Users,DC=hutch,DC=offsec"
+}]

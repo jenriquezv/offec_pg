@@ -1,0 +1,176 @@
+[{
+    "attributes": {
+        "auditingPolicy": [
+            "\u0000\u0001"
+        ],
+        "creationTime": [
+            "2021-02-25 15:24:05.576630+00:00"
+        ],
+        "dSASignature": [
+            {
+                "encoded": "AQAAACgAAAAAAAAAAAAAAAAAAAAAAAAALKrpI4be1EKopZcEO99EXg==",
+                "encoding": "base64"
+            }
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "dc": [
+            "hutch"
+        ],
+        "distinguishedName": [
+            "DC=hutch,DC=offsec"
+        ],
+        "fSMORoleOwner": [
+            "CN=NTDS Settings,CN=HUTCHDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "forceLogoff": [
+            -9223372036854775808
+        ],
+        "gPLink": [
+            "[LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=hutch,DC=offsec;0]"
+        ],
+        "instanceType": [
+            5
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lockOutObservationWindow": [
+            "0:30:00"
+        ],
+        "lockoutDuration": [
+            "0:30:00"
+        ],
+        "lockoutThreshold": [
+            0
+        ],
+        "masteredBy": [
+            "CN=NTDS Settings,CN=HUTCHDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "maxPwdAge": [
+            "999999999 days, 23:59:59.999999"
+        ],
+        "minPwdAge": [
+            "0:00:00"
+        ],
+        "minPwdLength": [
+            7
+        ],
+        "modifiedCount": [
+            1
+        ],
+        "modifiedCountAtLastProm": [
+            0
+        ],
+        "ms-DS-MachineAccountQuota": [
+            10
+        ],
+        "msDS-AllUsersTrustQuota": [
+            1000
+        ],
+        "msDS-Behavior-Version": [
+            7
+        ],
+        "msDS-ExpirePasswordsOnSmartCardOnlyAccounts": [
+            true
+        ],
+        "msDS-IsDomainFor": [
+            "CN=NTDS Settings,CN=HUTCHDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "msDS-NcType": [
+            0
+        ],
+        "msDS-PerUserTrustQuota": [
+            1
+        ],
+        "msDS-PerUserTrustTombstonesQuota": [
+            10
+        ],
+        "msDs-masteredBy": [
+            "CN=NTDS Settings,CN=HUTCHDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "nTMixedDomain": [
+            0
+        ],
+        "name": [
+            "hutch"
+        ],
+        "nextRid": [
+            1000
+        ],
+        "objectCategory": [
+            "CN=Domain-DNS,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "domain",
+            "domainDNS"
+        ],
+        "objectGUID": [
+            "{2bf503a1-042a-4339-b610-fee7d5e741ef}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489"
+        ],
+        "otherWellKnownObjects": [
+            "B:32:683A24E2E8164BD3AF86AC3C2CF3F981:CN=Keys,DC=hutch,DC=offsec",
+            "B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts,DC=hutch,DC=offsec"
+        ],
+        "pwdHistoryLength": [
+            0
+        ],
+        "pwdProperties": [
+            1
+        ],
+        "rIDManagerReference": [
+            "CN=RID Manager$,CN=System,DC=hutch,DC=offsec"
+        ],
+        "replUpToDateVector": [
+            {
+                "encoded": "AgAAAAAAAAAGAAAAAAAAACyq6SOG3tRCqKWXBDvfRF4DUAAAAAAAAKMsuRUDAAAAJUn2b3iOS0OhYBGQaNJwwQ4AAQAAAAAAbDM/FgMAAADd1fCAhDDSQK9Ev6aD/h88ECABAAAAAAAUUkgWAwAAAA7MuKu5x7FHsCpKDdWeoYgJsAAAAAAAAErkOxYDAAAAlYHuxDO1gEuJcUQWgfSQvgvQAAAAAAAAVkA9FgMAAAAdcbHu9H9TSZ3ZIYk5dS/GCsAAAAAAAAD7WjwWAwAAAA==",
+                "encoding": "base64"
+            }
+        ],
+        "serverState": [
+            1
+        ],
+        "subRefs": [
+            "DC=ForestDnsZones,DC=hutch,DC=offsec",
+            "DC=DomainDnsZones,DC=hutch,DC=offsec",
+            "CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "systemFlags": [
+            -1946157056
+        ],
+        "uASCompat": [
+            1
+        ],
+        "uSNChanged": [
+            73803
+        ],
+        "uSNCreated": [
+            4099
+        ],
+        "wellKnownObjects": [
+            "B:32:6227F0AF1FC2410D8E3BB10615BB5B0F:CN=NTDS Quotas,DC=hutch,DC=offsec",
+            "B:32:F4BE92A4C777485E878E9421D53087DB:CN=Microsoft,CN=Program Data,DC=hutch,DC=offsec",
+            "B:32:09460C08AE1E4A4EA0F64AEE7DAA1E5A:CN=Program Data,DC=hutch,DC=offsec",
+            "B:32:22B70C67D56E4EFB91E9300FCA3DC1AA:CN=ForeignSecurityPrincipals,DC=hutch,DC=offsec",
+            "B:32:18E2EA80684F11D2B9AA00C04F79F805:CN=Deleted Objects,DC=hutch,DC=offsec",
+            "B:32:2FBAC1870ADE11D297C400C04FD8D5CD:CN=Infrastructure,DC=hutch,DC=offsec",
+            "B:32:AB8153B7768811D1ADED00C04FD8D5CD:CN=LostAndFound,DC=hutch,DC=offsec",
+            "B:32:AB1D30F3768811D1ADED00C04FD8D5CD:CN=System,DC=hutch,DC=offsec",
+            "B:32:A361B2FFFFD211D1AA4B00C04FD7D83A:OU=Domain Controllers,DC=hutch,DC=offsec",
+            "B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=hutch,DC=offsec",
+            "B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=hutch,DC=offsec"
+        ],
+        "whenChanged": [
+            "2022-01-25 03:23:31+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:25:32+00:00"
+        ]
+    },
+    "dn": "DC=hutch,DC=offsec"
+}]

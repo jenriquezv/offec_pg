@@ -1,0 +1,18 @@
+cn	name	sAMAccountName	memberOf	primaryGroupId	whenCreated	whenChanged	lastLogon	userAccountControl	pwdLastSet	objectSid	description
+Domain Administrator	Domain Administrator	domainadmin	Domain Admins	Domain Users	11/04/20 05:35:05	01/25/22 02:25:57	01/25/22 02:26:43	DONT_EXPIRE_PASSWD, NORMAL_ACCOUNT	02/16/21 05:24:22	S-1-5-21-2216925765-458455009-2806096489-1116	
+Freddy McSorley	Freddy McSorley	fmcsorley		Domain Users	11/04/20 05:35:05	01/25/22 05:24:11	01/25/22 05:25:33	DONT_EXPIRE_PASSWD, NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1115	Password set to CrabSharkJellyfish192 at user's request. Please change on next login.
+Arthur Gitthouse	Arthur Gitthouse	agitthouse		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1114	
+Claus Luddy	Claus Luddy	cluddy		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1113	
+Editha Aburrow	Editha Aburrow	eaburrow		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1112	
+Jane Frarey	Jane Frarey	jfrarey		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1111	
+Alexia Victoria	Alexia Victoria	avictoria		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1110	
+Joan McKendry	Joan McKendry	jmckendry		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1109	
+Ottilie Knee	Ottilie Knee	oknee		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1108	
+Johnnie Sparwell	Johnnie Sparwell	jsparwell		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1107	
+Arlyn Costello	Arlyn Costello	acostello		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1106	
+Lyndsie Taunton	Lyndsie Taunton	ltaunton		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1105	
+Otto Patry	Otto Patry	opatry		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1104	
+Rosaline Placidi	Rosaline Placidi	rplacidi		Domain Users	11/04/20 05:35:05	11/04/20 05:35:05	0	NORMAL_ACCOUNT	11/04/20 05:35:05	S-1-5-21-2216925765-458455009-2806096489-1103	
+krbtgt	krbtgt	krbtgt	Denied RODC Password Replication Group	Domain Users	11/04/20 05:26:23	11/04/20 05:41:32	0	NORMAL_ACCOUNT, ACCOUNT_DISABLED	11/04/20 05:26:23	S-1-5-21-2216925765-458455009-2806096489-502	Key Distribution Center Service Account
+Guest	Guest	Guest	Guests	Domain Guests	11/04/20 05:25:40	11/04/20 05:25:40	0	DONT_EXPIRE_PASSWD, PASSWD_NOTREQD, NORMAL_ACCOUNT, ACCOUNT_DISABLED	0	S-1-5-21-2216925765-458455009-2806096489-501	Built-in account for guest access to the computer/domain
+Administrator	Administrator	Administrator	Group Policy Creator Owners, Domain Admins, Enterprise Admins, Schema Admins, Administrators	Domain Users	11/04/20 05:25:40	01/25/22 02:29:24	11/04/20 05:58:40	DONT_EXPIRE_PASSWD, NORMAL_ACCOUNT	01/25/22 02:29:24	S-1-5-21-2216925765-458455009-2806096489-500	Built-in account for administering the computer/domain

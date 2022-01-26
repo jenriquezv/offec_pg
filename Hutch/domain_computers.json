@@ -1,0 +1,155 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "HUTCHDC"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "hutchdc.hutch.offsec"
+        ],
+        "dSCorePropagationData": [
+            "2020-11-04 06:00:35+00:00",
+            "2020-11-04 06:00:35+00:00",
+            "2020-11-04 06:00:34+00:00",
+            "2020-11-04 05:26:23+00:00",
+            "1601-07-14 22:36:49+00:00"
+        ],
+        "distinguishedName": [
+            "CN=HUTCHDC,OU=Domain Controllers,DC=hutch,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-25 02:39:37.661793+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-25 02:26:03.239920+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            61
+        ],
+        "ms-Mcs-AdmPwd": [
+            "jn4({0)h6{{59R"
+        ],
+        "ms-Mcs-AdmPwdExpirationTime": [
+            132901433644430410
+        ],
+        "msDFSR-ComputerReferenceBL": [
+            "CN=HUTCHDC,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=hutch,DC=offsec"
+        ],
+        "msDS-GenerationId": [
+            {
+                "encoded": "34hNLa9O5Ck=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "HUTCHDC"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{05f1ad73-46eb-4b16-ba6d-6b3a87dd402e}"
+        ],
+        "objectSid": [
+            "S-1-5-21-2216925765-458455009-2806096489-1000"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            516
+        ],
+        "pwdLastSet": [
+            "2022-01-25 02:26:03.318035+00:00"
+        ],
+        "rIDSetReferences": [
+            "CN=RID Set,CN=HUTCHDC,OU=Domain Controllers,DC=hutch,DC=offsec"
+        ],
+        "sAMAccountName": [
+            "HUTCHDC$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "serverReferenceBL": [
+            "CN=HUTCHDC,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=hutch,DC=offsec"
+        ],
+        "servicePrincipalName": [
+            "Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/hutchdc.hutch.offsec",
+            "ldap/hutchdc.hutch.offsec/ForestDnsZones.hutch.offsec",
+            "ldap/hutchdc.hutch.offsec/DomainDnsZones.hutch.offsec",
+            "DNS/hutchdc.hutch.offsec",
+            "GC/hutchdc.hutch.offsec/hutch.offsec",
+            "RestrictedKrbHost/hutchdc.hutch.offsec",
+            "RestrictedKrbHost/HUTCHDC",
+            "RPC/23e9aa2c-de86-42d4-a8a5-97043bdf445e._msdcs.hutch.offsec",
+            "HOST/HUTCHDC/HUTCH",
+            "HOST/hutchdc.hutch.offsec/HUTCH",
+            "HOST/HUTCHDC",
+            "HOST/hutchdc.hutch.offsec",
+            "HOST/hutchdc.hutch.offsec/hutch.offsec",
+            "E3514235-4B06-11D1-AB04-00C04FC2DCD2/23e9aa2c-de86-42d4-a8a5-97043bdf445e/hutch.offsec",
+            "ldap/HUTCHDC/HUTCH",
+            "ldap/23e9aa2c-de86-42d4-a8a5-97043bdf445e._msdcs.hutch.offsec",
+            "ldap/hutchdc.hutch.offsec/HUTCH",
+            "ldap/HUTCHDC",
+            "ldap/hutchdc.hutch.offsec",
+            "ldap/hutchdc.hutch.offsec/hutch.offsec"
+        ],
+        "uSNChanged": [
+            73794
+        ],
+        "uSNCreated": [
+            12293
+        ],
+        "userAccountControl": [
+            532480
+        ],
+        "whenChanged": [
+            "2022-01-25 02:29:24+00:00"
+        ],
+        "whenCreated": [
+            "2020-11-04 05:26:22+00:00"
+        ]
+    },
+    "dn": "CN=HUTCHDC,OU=Domain Controllers,DC=hutch,DC=offsec"
+}]

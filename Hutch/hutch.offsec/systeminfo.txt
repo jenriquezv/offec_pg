@@ -1,0 +1,47 @@
+Host Name:                 HUTCHDC
+OS Name:                   Microsoft Windows Server 2019 Standard
+OS Version:                10.0.17763 N/A Build 17763
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Primary Domain Controller
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Windows User
+Registered Organization:   
+Product ID:                00429-70000-00000-AA700
+Original Install Date:     11/4/2020, 4:06:43 AM
+System Boot Time:          2/25/2021, 7:23:53 AM
+System Manufacturer:       VMware, Inc.
+System Model:              VMware7,1
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: AMD64 Family 23 Model 1 Stepping 2 AuthenticAMD ~3094 Mhz
+BIOS Version:              VMware, Inc. VMW71.00V.16707776.B64.2008070230, 8/7/2020
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume2
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC-08:00) Pacific Time (US & Canada)
+Total Physical Memory:     2,047 MB
+Available Physical Memory: 831 MB
+Virtual Memory: Max Size:  3,199 MB
+Virtual Memory: Available: 2,087 MB
+Virtual Memory: In Use:    1,112 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    hutch.offsec
+Logon Server:              N/A
+Hotfix(s):                 7 Hotfix(s) Installed.
+                           [01]: KB4580422
+                           [02]: KB4462930
+                           [03]: KB4512577
+                           [04]: KB4577667
+                           [05]: KB4580325
+                           [06]: KB4587735
+                           [07]: KB4592440
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: vmxnet3 Ethernet Adapter
+                                 Connection Name: Ethernet0
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 192.168.240.122
+                                 [02]: fe80::5514:d0ec:dcbd:b44a
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
