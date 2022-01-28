@@ -1,0 +1,268 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "svc_apache"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "DC01.heist.offsec"
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "distinguishedName": [
+            "CN=svc_apache,CN=Managed Service Accounts,DC=heist,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            false
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2021-09-14 15:27:06.040897+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Remote Management Users,CN=Builtin,DC=heist,DC=offsec"
+        ],
+        "msDS-GroupMSAMembership": [
+            {
+                "encoded": "AQAEgBQAAAAAAAAAAAAAACQAAAABAgAAAAAABSAAAAAgAgAABABQAAIAAAAAACQA/wEPAAEFAAAAAAAFFQAAAN9/CCC20DUdd6IUWugDAAAAACQA/wEPAAEFAAAAAAAFFQAAAN9/CCC20DUdd6IUWlAEAAA=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-ManagedPasswordId": [
+            {
+                "encoded": "AQAAAEtEU0sCAAAAaAEAAAAAAAAFAAAAHLeXqNjk/hKM/fxCG4Uv4wAAAAAaAAAAGgAAAGgAZQBpAHMAdAAuAG8AZgBmAHMAZQBjAAAAaABlAGkAcwB0AC4AbwBmAGYAcwBlAGMAAAA=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-ManagedPasswordInterval": [
+            30
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "svc_apache"
+        ],
+        "objectCategory": [
+            "CN=ms-DS-Group-Managed-Service-Account,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer",
+            "msDS-GroupManagedServiceAccount"
+        ],
+        "objectGUID": [
+            "{d40bc264-0c4e-4b86-b3b9-b775995ba303}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-1105"
+        ],
+        "primaryGroupID": [
+            515
+        ],
+        "pwdLastSet": [
+            "2021-07-20 11:23:44.238161+00:00"
+        ],
+        "sAMAccountName": [
+            "svc_apache$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "uSNChanged": [
+            24598
+        ],
+        "uSNCreated": [
+            12814
+        ],
+        "userAccountControl": [
+            4096
+        ],
+        "whenChanged": [
+            "2021-09-14 15:27:06+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:23:44+00:00"
+        ]
+    },
+    "dn": "CN=svc_apache,CN=Managed Service Accounts,DC=heist,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "DC01"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dNSHostName": [
+            "DC01.heist.offsec"
+        ],
+        "dSCorePropagationData": [
+            "2021-07-20 11:02:21+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "distinguishedName": [
+            "CN=DC01,OU=Domain Controllers,DC=heist,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-26 03:56:17.004305+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-26 03:56:10.769913+00:00"
+        ],
+        "localPolicyFlags": [
+            0
+        ],
+        "logonCount": [
+            22
+        ],
+        "msDFSR-ComputerReferenceBL": [
+            "CN=DC01,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=heist,DC=offsec"
+        ],
+        "msDS-GenerationId": [
+            {
+                "encoded": "/DqSCBfE+nk=",
+                "encoding": "base64"
+            }
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            28
+        ],
+        "name": [
+            "DC01"
+        ],
+        "objectCategory": [
+            "CN=Computer,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user",
+            "computer"
+        ],
+        "objectGUID": [
+            "{84cd7666-cc78-4e87-aad1-d25def0b2bbc}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-1000"
+        ],
+        "operatingSystem": [
+            "Windows Server 2019 Standard"
+        ],
+        "operatingSystemVersion": [
+            "10.0 (17763)"
+        ],
+        "primaryGroupID": [
+            516
+        ],
+        "pwdLastSet": [
+            "2022-01-26 03:56:10.848040+00:00"
+        ],
+        "rIDSetReferences": [
+            "CN=RID Set,CN=DC01,OU=Domain Controllers,DC=heist,DC=offsec"
+        ],
+        "sAMAccountName": [
+            "DC01$"
+        ],
+        "sAMAccountType": [
+            805306369
+        ],
+        "serverReferenceBL": [
+            "CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "servicePrincipalName": [
+            "TERMSRV/DC01",
+            "TERMSRV/DC01.heist.offsec",
+            "Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/DC01.heist.offsec",
+            "ldap/DC01.heist.offsec/ForestDnsZones.heist.offsec",
+            "ldap/DC01.heist.offsec/DomainDnsZones.heist.offsec",
+            "DNS/DC01.heist.offsec",
+            "GC/DC01.heist.offsec/heist.offsec",
+            "RestrictedKrbHost/DC01.heist.offsec",
+            "RestrictedKrbHost/DC01",
+            "RPC/620d53fe-9889-4422-99e8-d69620a5a9e5._msdcs.heist.offsec",
+            "HOST/DC01/HEIST",
+            "HOST/DC01.heist.offsec/HEIST",
+            "HOST/DC01",
+            "HOST/DC01.heist.offsec",
+            "HOST/DC01.heist.offsec/heist.offsec",
+            "E3514235-4B06-11D1-AB04-00C04FC2DCD2/620d53fe-9889-4422-99e8-d69620a5a9e5/heist.offsec",
+            "ldap/DC01/HEIST",
+            "ldap/620d53fe-9889-4422-99e8-d69620a5a9e5._msdcs.heist.offsec",
+            "ldap/DC01.heist.offsec/HEIST",
+            "ldap/DC01",
+            "ldap/DC01.heist.offsec",
+            "ldap/DC01.heist.offsec/heist.offsec"
+        ],
+        "uSNChanged": [
+            28716
+        ],
+        "uSNCreated": [
+            12293
+        ],
+        "userAccountControl": [
+            532480
+        ],
+        "whenChanged": [
+            "2022-01-26 03:56:10+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:02:20+00:00"
+        ]
+    },
+    "dn": "CN=DC01,OU=Domain Controllers,DC=heist,DC=offsec"
+}]

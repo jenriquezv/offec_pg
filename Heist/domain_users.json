@@ -1,0 +1,418 @@
+[{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-26 06:14:48.926168+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Naqi"
+        ],
+        "codePage": [
+            0
+        ],
+        "company": [
+            "Heist"
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "distinguishedName": [
+            "CN=Naqi,CN=Users,DC=heist,DC=offsec"
+        ],
+        "givenName": [
+            "Naqi"
+        ],
+        "instanceType": [
+            4
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-26 06:16:54.004290+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-26 05:57:47.660719+00:00"
+        ],
+        "logonCount": [
+            8
+        ],
+        "memberOf": [
+            "CN=Web Admins,CN=Users,DC=heist,DC=offsec",
+            "CN=Remote Management Users,CN=Builtin,DC=heist,DC=offsec"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "Naqi"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{82c847e5-1db7-4c00-8b06-882efb4efc6f}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-1103"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2021-08-31 13:09:05.852882+00:00"
+        ],
+        "sAMAccountName": [
+            "enox"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28746
+        ],
+        "uSNCreated": [
+            12774
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "whenChanged": [
+            "2022-01-26 05:57:47+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:17:16+00:00"
+        ]
+    },
+    "dn": "CN=Naqi,CN=Users,DC=heist,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "krbtgt"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2021-07-20 11:17:30+00:00",
+            "2021-07-20 11:02:21+00:00",
+            "1601-01-01 00:04:16+00:00"
+        ],
+        "description": [
+            "Key Distribution Center Service Account"
+        ],
+        "distinguishedName": [
+            "CN=krbtgt,CN=Users,DC=heist,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Denied RODC Password Replication Group,CN=Users,DC=heist,DC=offsec"
+        ],
+        "msDS-SupportedEncryptionTypes": [
+            0
+        ],
+        "name": [
+            "krbtgt"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{d7ab34bf-824d-49cc-9780-ceaa01661cad}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-502"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2021-07-20 11:02:20.922009+00:00"
+        ],
+        "sAMAccountName": [
+            "krbtgt"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "servicePrincipalName": [
+            "kadmin/changepw"
+        ],
+        "showInAdvancedViewOnly": [
+            true
+        ],
+        "uSNChanged": [
+            12800
+        ],
+        "uSNCreated": [
+            12324
+        ],
+        "userAccountControl": [
+            514
+        ],
+        "whenChanged": [
+            "2021-07-20 11:17:30+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:02:20+00:00"
+        ]
+    },
+    "dn": "CN=krbtgt,CN=Users,DC=heist,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "9999-12-31 23:59:59.999999+00:00"
+        ],
+        "badPasswordTime": [
+            "2022-01-26 04:28:47.613924+00:00"
+        ],
+        "badPwdCount": [
+            1
+        ],
+        "cn": [
+            "Guest"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2021-07-20 11:02:21+00:00",
+            "1601-01-01 00:00:01+00:00"
+        ],
+        "description": [
+            "Built-in account for guest access to the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Guest,CN=Users,DC=heist,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "logonCount": [
+            0
+        ],
+        "memberOf": [
+            "CN=Guests,CN=Builtin,DC=heist,DC=offsec"
+        ],
+        "name": [
+            "Guest"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{feade1e9-d86c-4a9f-831a-04405f31320a}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-501"
+        ],
+        "primaryGroupID": [
+            514
+        ],
+        "pwdLastSet": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "sAMAccountName": [
+            "Guest"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            8197
+        ],
+        "uSNCreated": [
+            8197
+        ],
+        "userAccountControl": [
+            66082
+        ],
+        "whenChanged": [
+            "2021-07-20 11:01:30+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:01:30+00:00"
+        ]
+    },
+    "dn": "CN=Guest,CN=Users,DC=heist,DC=offsec"
+},{
+    "attributes": {
+        "accountExpires": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "adminCount": [
+            1
+        ],
+        "badPasswordTime": [
+            "2021-07-20 10:56:31.794176+00:00"
+        ],
+        "badPwdCount": [
+            0
+        ],
+        "cn": [
+            "Administrator"
+        ],
+        "codePage": [
+            0
+        ],
+        "countryCode": [
+            0
+        ],
+        "dSCorePropagationData": [
+            "2021-07-20 11:17:30+00:00",
+            "2021-07-20 11:17:30+00:00",
+            "2021-07-20 11:02:21+00:00",
+            "1601-01-01 18:12:16+00:00"
+        ],
+        "description": [
+            "Built-in account for administering the computer/domain"
+        ],
+        "distinguishedName": [
+            "CN=Administrator,CN=Users,DC=heist,DC=offsec"
+        ],
+        "instanceType": [
+            4
+        ],
+        "isCriticalSystemObject": [
+            true
+        ],
+        "lastLogoff": [
+            "1601-01-01 00:00:00+00:00"
+        ],
+        "lastLogon": [
+            "2022-01-26 03:56:44.754442+00:00"
+        ],
+        "lastLogonTimestamp": [
+            "2022-01-26 03:56:03.426163+00:00"
+        ],
+        "logonCount": [
+            35
+        ],
+        "logonHours": [
+            {
+                "encoded": "////////////////////////////",
+                "encoding": "base64"
+            }
+        ],
+        "memberOf": [
+            "CN=Group Policy Creator Owners,CN=Users,DC=heist,DC=offsec",
+            "CN=Domain Admins,CN=Users,DC=heist,DC=offsec",
+            "CN=Enterprise Admins,CN=Users,DC=heist,DC=offsec",
+            "CN=Schema Admins,CN=Users,DC=heist,DC=offsec",
+            "CN=Administrators,CN=Builtin,DC=heist,DC=offsec"
+        ],
+        "name": [
+            "Administrator"
+        ],
+        "objectCategory": [
+            "CN=Person,CN=Schema,CN=Configuration,DC=heist,DC=offsec"
+        ],
+        "objectClass": [
+            "top",
+            "person",
+            "organizationalPerson",
+            "user"
+        ],
+        "objectGUID": [
+            "{e6290804-d94d-4482-b1b5-837f7d61fa3b}"
+        ],
+        "objectSid": [
+            "S-1-5-21-537427935-490066102-1511301751-500"
+        ],
+        "primaryGroupID": [
+            513
+        ],
+        "pwdLastSet": [
+            "2021-09-14 14:22:50.794226+00:00"
+        ],
+        "sAMAccountName": [
+            "Administrator"
+        ],
+        "sAMAccountType": [
+            805306368
+        ],
+        "uSNChanged": [
+            28711
+        ],
+        "uSNCreated": [
+            8196
+        ],
+        "userAccountControl": [
+            66048
+        ],
+        "whenChanged": [
+            "2022-01-26 03:56:03+00:00"
+        ],
+        "whenCreated": [
+            "2021-07-20 11:01:30+00:00"
+        ]
+    },
+    "dn": "CN=Administrator,CN=Users,DC=heist,DC=offsec"
+}]

